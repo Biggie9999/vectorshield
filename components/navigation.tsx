@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Shield } from "lucide-react"
 import { ThemeToggle } from "./theme-toggle"
+import Image from "next/image"
 
 const WHATSAPP_NUMBER = "14145511344"
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hi%2C%20I%20need%20help%20with%20crypto%20recovery.`
@@ -30,7 +31,13 @@ export function Navigation() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2.5">
-            <Shield className="w-6 h-6 sm:w-7 sm:h-7 text-primary" strokeWidth={1.5} />
+            <Image 
+              src="/images/logo.png" 
+              alt="VectorShield Logo" 
+              width={32} 
+              height={32} 
+              className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+            />
             <span className="text-foreground font-bold text-base sm:text-lg tracking-tight">
               VectorShield
             </span>

@@ -10,7 +10,25 @@ const scamTypes = [
       "Project creators abandon a token after raising funds, leaving investors with worthless assets. Common in DeFi and NFT projects.",
     method:
       "We trace deployment wallets, identify connected exchanges, and work with legal teams to freeze assets before liquidation.",
-    recoveryRate: "72%",
+    recoveryRate: "85%",
+  },
+  {
+    id: "wire-transfer-fraud",
+    name: "Wire Transfer Fraud",
+    description:
+      "Unauthorized or deeply deceptive wire transfers initiated to offshore or fraudulent accounts.",
+    method:
+      "Global banking network tracing, inter-bank communication, and immediate freezing orders.",
+    recoveryRate: "82%",
+  },
+  {
+    id: "bank-transfer-fraud",
+    name: "Bank Transfer Fraud",
+    description:
+      "Fraudulent manipulation leading to direct bank-to-bank transfers under false pretenses.",
+    method:
+      "SWIFT network analysis, financial institution liaison, and regulatory intervention.",
+    recoveryRate: "76%",
   },
   {
     id: "fake-exchange",
@@ -19,7 +37,7 @@ const scamTypes = [
       "Fraudulent platforms that mimic legitimate exchanges, stealing deposits and blocking withdrawals.",
     method:
       "Domain forensics, wallet tracing to real exchanges, and coordination with hosting providers and law enforcement.",
-    recoveryRate: "68%",
+    recoveryRate: "79%",
   },
   {
     id: "romance-fraud",
@@ -28,7 +46,7 @@ const scamTypes = [
       "Long-term manipulation schemes where criminals build fake relationships to extract crypto payments.",
     method:
       "Social engineering analysis, multi-platform wallet tracing, and partnership with international cybercrime units.",
-    recoveryRate: "54%",
+    recoveryRate: "75%",
   },
   {
     id: "investment-scheme",
@@ -37,7 +55,7 @@ const scamTypes = [
       "Ponzi or pyramid structures disguised as legitimate investment opportunities with guaranteed returns.",
     method:
       "Full network analysis, identification of fund flow patterns, and coordination with securities regulators.",
-    recoveryRate: "61%",
+    recoveryRate: "83%",
   },
   {
     id: "wallet-hack",
@@ -55,7 +73,7 @@ const scamTypes = [
       "Counterfeit NFTs, marketplace exploits, or fake minting sites that drain wallets.",
     method:
       "Smart contract analysis, marketplace coordination, and recovery of ETH/SOL from traced wallets.",
-    recoveryRate: "65%",
+    recoveryRate: "81%",
   },
   {
     id: "pig-butchering",
@@ -64,7 +82,7 @@ const scamTypes = [
       "Long-con investment fraud combining romance scams with fake trading platforms over months.",
     method:
       "Multi-jurisdictional investigation, deep wallet analysis, and collaboration with Asian cybercrime taskforces.",
-    recoveryRate: "47%",
+    recoveryRate: "77%",
   },
   {
     id: "phishing",
@@ -73,10 +91,9 @@ const scamTypes = [
       "Deceptive emails, websites, or messages that trick users into revealing private keys or signing malicious transactions.",
     method:
       "Rapid response tracing, immediate exchange alerts, and smart contract interaction reversal where possible.",
-    recoveryRate: "71%",
+    recoveryRate: "84%",
   },
 ]
-
 export function ScamTypeSelector() {
   const [selected, setSelected] = useState(scamTypes[0])
   const scrollRef = useRef<HTMLDivElement>(null)
