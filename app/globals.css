@@ -3,41 +3,40 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* VectorShield Recovery - Dark Cyber Intelligence Theme */
+/* VectorShield Recovery - Light/Dark Theme */
 :root {
-  /* Near-black backgrounds */
-  --background: #080C12;
-  --foreground: #F0F4F8;
+  /* Light mode - clean, professional */
+  --background: #FAFBFC;
+  --foreground: #0D1117;
   
-  /* Card backgrounds - slightly lighter than base */
-  --card: #0D1117;
-  --card-foreground: #F0F4F8;
+  --card: #FFFFFF;
+  --card-foreground: #0D1117;
   
-  --popover: #0D1117;
-  --popover-foreground: #F0F4F8;
+  --popover: #FFFFFF;
+  --popover-foreground: #0D1117;
   
   /* Electric blue primary */
   --primary: #0E6FFF;
   --primary-foreground: #FFFFFF;
   
-  /* Secondary - dark slate */
-  --secondary: #151B23;
-  --secondary-foreground: #F0F4F8;
+  /* Secondary */
+  --secondary: #F0F3F6;
+  --secondary-foreground: #0D1117;
   
-  /* Muted - for secondary text */
-  --muted: #151B23;
-  --muted-foreground: #6B7D93;
+  /* Muted */
+  --muted: #F0F3F6;
+  --muted-foreground: #57606A;
   
-  /* Accent - brighter blue */
+  /* Accent */
   --accent: #1A8CFF;
   --accent-foreground: #FFFFFF;
   
   --destructive: #FF4444;
   --destructive-foreground: #FFFFFF;
   
-  /* Border - subtle blue tint */
-  --border: #1E2A3A;
-  --input: #151B23;
+  /* Border */
+  --border: #D8DEE4;
+  --input: #F0F3F6;
   --ring: #0E6FFF;
   
   --chart-1: #0E6FFF;
@@ -46,7 +45,38 @@
   --chart-4: #6BB8FF;
   --chart-5: #9DD0FF;
   
-  --radius: 0.125rem;
+  --radius: 0.75rem;
+}
+
+/* Dark mode - cyber intelligence */
+.dark {
+  --background: #080C12;
+  --foreground: #F0F4F8;
+  
+  --card: #0D1117;
+  --card-foreground: #F0F4F8;
+  
+  --popover: #0D1117;
+  --popover-foreground: #F0F4F8;
+  
+  --primary: #0E6FFF;
+  --primary-foreground: #FFFFFF;
+  
+  --secondary: #151B23;
+  --secondary-foreground: #F0F4F8;
+  
+  --muted: #151B23;
+  --muted-foreground: #6B7D93;
+  
+  --accent: #1A8CFF;
+  --accent-foreground: #FFFFFF;
+  
+  --destructive: #FF4444;
+  --destructive-foreground: #FFFFFF;
+  
+  --border: #1E2A3A;
+  --input: #151B23;
+  --ring: #0E6FFF;
 }
 
 @theme inline {

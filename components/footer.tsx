@@ -2,7 +2,7 @@ import { Shield } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-card">
+    <footer className="border-t border-border bg-card rounded-t-3xl">
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Logo & tagline */}

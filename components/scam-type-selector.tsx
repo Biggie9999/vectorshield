@@ -98,7 +98,7 @@ export function ScamTypeSelector() {
             <button
               key={type.id}
               onClick={() => setSelected(type)}
-              className={`flex-shrink-0 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-[2px] ${
+              className={`flex-shrink-0 px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-xl ${
                 selected.id === type.id
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary border border-border text-foreground hover:border-primary"
@@ -111,7 +111,7 @@ export function ScamTypeSelector() {
 
         {/* Dynamic content */}
         <div className="grid md:grid-cols-3 gap-6 mt-8">
-          <div className="p-6 bg-card border-l-2 border-l-primary border border-border">
+          <div className="p-6 bg-card border-l-4 border-l-primary border border-border rounded-xl">
             <h3 className="text-xs uppercase tracking-wider text-muted-foreground mb-3">
               Description
             </h3>
@@ -119,13 +119,13 @@ export function ScamTypeSelector() {
               {selected.description}
             </p>
           </div>
-          <div className="p-6 bg-card border-l-2 border-l-primary border border-border">
+          <div className="p-6 bg-card border-l-4 border-l-primary border border-border rounded-xl">
             <h3 className="text-xs uppercase tracking-wider text-muted-foreground mb-3">
               Recovery Method
             </h3>
             <p className="text-foreground leading-relaxed">{selected.method}</p>
           </div>
-          <div className="p-6 bg-card border-l-2 border-l-primary border border-border">
+          <div className="p-6 bg-card border-l-4 border-l-primary border border-border rounded-xl">
             <h3 className="text-xs uppercase tracking-wider text-muted-foreground mb-3">
               Average Recovery Rate
             </h3>

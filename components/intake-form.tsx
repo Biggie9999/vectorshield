@@ -81,7 +81,7 @@ export function IntakeForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
-                className="w-full px-4 py-3 bg-transparent border border-border text-foreground placeholder:text-muted-foreground focus:border-primary focus:text-primary focus:outline-none transition-colors rounded-[2px]"
+                className="w-full px-4 py-3 bg-transparent border border-border text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none transition-colors rounded-xl"
                 placeholder="Your full name"
               />
             </div>
@@ -102,7 +102,7 @@ export function IntakeForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
-                className="w-full px-4 py-3 bg-transparent border border-border text-foreground placeholder:text-muted-foreground focus:border-primary focus:text-primary focus:outline-none transition-colors rounded-[2px]"
+                className="w-full px-4 py-3 bg-transparent border border-border text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none transition-colors rounded-xl"
                 placeholder="you@email.com"
               />
             </div>
@@ -126,7 +126,7 @@ export function IntakeForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, amount: e.target.value })
                 }
-                className="w-full px-4 py-3 bg-transparent border border-border text-foreground placeholder:text-muted-foreground focus:border-primary focus:text-primary focus:outline-none transition-colors rounded-[2px] [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                className="w-full px-4 py-3 bg-transparent border border-border text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none transition-colors rounded-xl [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                 placeholder="Estimated value"
               />
             </div>
@@ -146,7 +146,7 @@ export function IntakeForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, scamType: e.target.value })
                 }
-                className="w-full px-4 py-3 bg-background border border-border text-foreground focus:border-primary focus:outline-none transition-colors rounded-[2px] cursor-pointer"
+                className="w-full px-4 py-3 bg-background border border-border text-foreground focus:border-primary focus:outline-none transition-colors rounded-xl cursor-pointer"
               >
                 <option value="" disabled>
                   Select type
@@ -176,7 +176,7 @@ export function IntakeForm() {
               onChange={(e) =>
                 setFormData({ ...formData, description: e.target.value })
               }
-              className="w-full px-4 py-3 bg-transparent border border-border text-foreground placeholder:text-muted-foreground focus:border-primary focus:text-primary focus:outline-none transition-colors rounded-[2px] resize-none"
+              className="w-full px-4 py-3 bg-transparent border border-border text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none transition-colors rounded-xl resize-none"
               placeholder="What happened? Include any relevant details about the scam, wallet addresses, or platform names."
             />
           </div>
@@ -185,7 +185,7 @@ export function IntakeForm() {
           <button
             type="submit"
             disabled={status === "submitting" || status === "success"}
-            className="w-full px-6 py-4 bg-primary text-primary-foreground font-medium text-sm hover:bg-accent transition-colors rounded-[2px] disabled:opacity-70 disabled:cursor-not-allowed"
+            className="w-full px-6 py-4 bg-primary text-primary-foreground font-medium text-sm hover:bg-accent transition-colors rounded-xl disabled:opacity-70 disabled:cursor-not-allowed"
           >
             {status === "submitting" && "Submitting..."}
             {status === "success" && "Assessment Request Submitted"}

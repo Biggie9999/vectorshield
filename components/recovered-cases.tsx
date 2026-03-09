@@ -42,10 +42,10 @@ export function RecoveredCases() {
           {cases.map((caseItem) => (
             <div
               key={caseItem.id}
-              className="relative bg-card border border-border p-6 hover:border-primary/50 transition-colors"
+              className="relative bg-card border border-border p-6 hover:border-primary/50 transition-colors rounded-2xl"
             >
               {/* Closed badge */}
-              <div className="absolute top-4 right-4 px-2 py-1 bg-primary/10 border border-primary/30 rounded-[2px]">
+              <div className="absolute top-4 right-4 px-2.5 py-1 bg-primary/10 border border-primary/30 rounded-lg">
                 <span className="text-xs font-mono font-bold text-primary tracking-wider">
                   CLOSED
                 </span>
