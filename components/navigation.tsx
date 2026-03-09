@@ -22,22 +22,24 @@ export function Navigation() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-md border-b border-border"
+          ? "bg-background/90 backdrop-blur-xl border-b border-border shadow-sm"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
-            <Shield className="w-6 h-6 text-primary transition-colors group-hover:text-accent" />
-            <span className="text-foreground font-semibold tracking-tight">
+            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+              <Shield className="w-4 h-4 text-primary" />
+            </div>
+            <span className="text-foreground font-semibold tracking-tight text-sm md:text-base">
               VectorShield
             </span>
           </a>
 
           {/* Navigation Links - Hidden on mobile */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-8">
             <a
               href="#services"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -65,27 +67,27 @@ export function Navigation() {
           </div>
 
           {/* Right side actions */}
-          <div className="flex items-center gap-3">
-            {/* Theme Toggle - always visible */}
+          <div className="flex items-center gap-2 md:gap-3">
+            {/* Theme Toggle */}
             <ThemeToggle />
 
             {/* Desktop CTA */}
             <a
               href="#contact"
-              className="hidden md:inline-flex px-5 py-2.5 text-sm font-medium border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-200 rounded-xl"
+              className="hidden lg:inline-flex px-5 py-2.5 text-sm font-medium border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-200 rounded-xl"
             >
               Start Recovery
             </a>
 
-            {/* Mobile WhatsApp CTA - only on mobile, no hamburger */}
+            {/* Mobile/Tablet WhatsApp CTA */}
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="md:hidden inline-flex items-center gap-2 px-4 py-2.5 bg-[#25D366] text-white font-medium text-sm rounded-xl hover:bg-[#20BD5A] transition-colors"
+              className="lg:hidden inline-flex items-center gap-1.5 px-3 py-2 bg-[#25D366] text-white font-medium text-xs rounded-full hover:bg-[#20BD5A] transition-colors shadow-lg shadow-[#25D366]/20"
             >
-              <MessageCircle className="w-4 h-4" />
-              <span>Chat Now</span>
+              <MessageCircle className="w-3.5 h-3.5" />
+              <span>Chat</span>
             </a>
           </div>
         </div>

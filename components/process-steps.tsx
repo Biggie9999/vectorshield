@@ -33,11 +33,14 @@ const steps = [
 
 export function ProcessSteps() {
   return (
-    <section id="process" className="py-24 border-t border-border">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-2xl md:text-3xl font-bold mb-16 tracking-tight">
-          How Recovery Works
-        </h2>
+    <section id="process" className="py-16 md:py-24 border-t border-border">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="mb-10 md:mb-16">
+          <p className="text-xs font-medium text-primary uppercase tracking-wider mb-2">Our Process</p>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight">
+            How Recovery Works
+          </h2>
+        </div>
 
         {/* Desktop: Horizontal */}
         <div className="hidden lg:grid lg:grid-cols-5 gap-8">
@@ -60,18 +63,25 @@ export function ProcessSteps() {
           ))}
         </div>
 
-        {/* Mobile/Tablet: Vertical */}
-        <div className="lg:hidden space-y-8">
-          {steps.map((step) => (
-            <div key={step.number} className="flex gap-6">
-              <span className="text-5xl font-mono font-bold text-primary/10 flex-shrink-0 w-16">
-                {step.number}
-              </span>
-              <div className="pt-2">
-                <h3 className="text-base font-semibold mb-2 text-foreground">
+        {/* Mobile/Tablet: Vertical with timeline */}
+        <div className="lg:hidden space-y-0">
+          {steps.map((step, index) => (
+            <div key={step.number} className="flex gap-4 relative">
+              {/* Timeline line */}
+              {index < steps.length - 1 && (
+                <div className="absolute left-5 top-12 w-0.5 h-[calc(100%-12px)] bg-border" />
+              )}
+              {/* Step number circle */}
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
+                <span className="text-sm font-mono font-bold text-primary">
+                  {step.number}
+                </span>
+              </div>
+              <div className="pb-8 pt-1">
+                <h3 className="text-sm sm:text-base font-semibold mb-1 text-foreground">
                   {step.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                   {step.description}
                 </p>
               </div>
