@@ -4,6 +4,8 @@ import { useState } from "react"
 
 const scamTypes = [
   "Rug Pull",
+  "Wire Transfer Fraud",
+  "Bank Transfer Fraud",
   "Fake Exchange",
   "Romance Fraud",
   "Investment Scheme",
@@ -28,19 +30,36 @@ export function IntakeForm() {
     e.preventDefault()
     setStatus("submitting")
 
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-    setStatus("success")
-
-    setTimeout(() => {
-      setStatus("idle")
-      setFormData({
-        name: "",
-        email: "",
-        amount: "",
-        scamType: "",
-        description: "",
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/Sarahleonard@vectorshieldrecovery.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(formData)
       })
-    }, 3000)
+
+      if (response.ok) {
+        setStatus("success")
+        setTimeout(() => {
+          setStatus("idle")
+          setFormData({
+            name: "",
+            email: "",
+            amount: "",
+            scamType: "",
+            description: "",
+          })
+        }, 3000)
+      } else {
+        setStatus("idle")
+        alert("There was an error submitting the form.")
+      }
+    } catch (error) {
+      setStatus("idle")
+      alert("There was an error submitting the form.")
+    }
   }
 
   return (
@@ -67,6 +86,7 @@ export function IntakeForm() {
               <input
                 type="text"
                 id="name"
+                name="name"
                 required
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -82,6 +102,7 @@ export function IntakeForm() {
               <input
                 type="email"
                 id="email"
+                name="email"
                 required
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -99,6 +120,7 @@ export function IntakeForm() {
               <input
                 type="number"
                 id="amount"
+                name="amount"
                 required
                 min="0"
                 value={formData.amount}
@@ -114,6 +136,7 @@ export function IntakeForm() {
               </label>
               <select
                 id="scamType"
+                name="scamType"
                 required
                 value={formData.scamType}
                 onChange={(e) => setFormData({ ...formData, scamType: e.target.value })}
@@ -137,6 +160,7 @@ export function IntakeForm() {
             </label>
             <textarea
               id="description"
+              name="description"
               required
               rows={4}
               value={formData.description}
