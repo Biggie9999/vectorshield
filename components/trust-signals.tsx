@@ -31,37 +31,36 @@ const certifications = [
 
 export function TrustSignals() {
   return (
-    <section className="py-16 md:py-24 border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="mb-8 md:mb-12">
-          <p className="text-xs font-medium text-primary uppercase tracking-wider mb-2">Why Us</p>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight">
+    <section className="py-20 border-t border-border">
+      <div className="max-w-7xl mx-auto px-5">
+        <div className="mb-12">
+          <p className="text-sm font-medium text-primary mb-3">Why Choose Us</p>
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
             Trusted Recovery Experts
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-16">
+        <div className="grid md:grid-cols-3 gap-5 mb-12">
           {signals.map((signal) => (
-            <div key={signal.title} className="p-4 sm:p-6 bg-card border border-border rounded-2xl space-y-3 sm:space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+            <div key={signal.title} className="p-6 bg-card border border-border rounded-xl">
+              <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
                 <signal.icon className="w-5 h-5 text-primary" strokeWidth={1.5} />
               </div>
-              <h3 className="text-sm sm:text-lg font-semibold text-foreground">
+              <h3 className="text-lg font-semibold text-foreground mb-2">
                 {signal.title}
               </h3>
-              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {signal.description}
               </p>
             </div>
           ))}
         </div>
 
-        {/* Certification logos */}
-        <div className="flex flex-wrap justify-center gap-4 sm:gap-8 pt-6 sm:pt-8 border-t border-border">
+        <div className="flex flex-wrap justify-center gap-6 pt-8 border-t border-border">
           {certifications.map((cert) => (
             <div
               key={cert}
-              className="text-[10px] sm:text-sm font-mono text-muted-foreground/50 uppercase tracking-wider"
+              className="text-sm font-mono text-muted-foreground/60 uppercase tracking-wide"
             >
               {cert}
             </div>

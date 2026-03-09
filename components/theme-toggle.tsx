@@ -14,7 +14,7 @@ export function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <div className="w-8 h-8 rounded-full bg-secondary/50" />
+      <div className="w-9 h-9 rounded-lg bg-secondary" />
     )
   }
 
@@ -27,12 +27,12 @@ export function ThemeToggle() {
   return (
     <button
       onClick={cycleTheme}
-      className="w-8 h-8 rounded-full bg-secondary/80 hover:bg-secondary flex items-center justify-center transition-all duration-200"
+      className="w-9 h-9 rounded-lg bg-secondary hover:bg-secondary/80 flex items-center justify-center transition-colors border border-border"
       aria-label={`Current theme: ${theme}. Click to change.`}
     >
-      {theme === "light" && <Sun className="w-3.5 h-3.5 text-foreground" />}
-      {theme === "dark" && <Moon className="w-3.5 h-3.5 text-foreground" />}
-      {theme === "system" && <Monitor className="w-3.5 h-3.5 text-foreground" />}
+      {theme === "light" && <Sun className="w-4 h-4 text-foreground" />}
+      {theme === "dark" && <Moon className="w-4 h-4 text-foreground" />}
+      {theme === "system" && <Monitor className="w-4 h-4 text-foreground" />}
     </button>
   )
 }

@@ -82,11 +82,11 @@ export function ScamTypeSelector() {
   const scrollRef = useRef<HTMLDivElement>(null)
 
   return (
-    <section id="services" className="py-16 md:py-24 border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="mb-8 md:mb-12">
-          <p className="text-xs font-medium text-primary uppercase tracking-wider mb-2">Recovery Services</p>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-balance">
+    <section id="services" className="py-20 border-t border-border">
+      <div className="max-w-7xl mx-auto px-5">
+        <div className="mb-10">
+          <p className="text-sm font-medium text-primary mb-3">Recovery Services</p>
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
             What type of scam are you dealing with?
           </h2>
         </div>
@@ -94,17 +94,17 @@ export function ScamTypeSelector() {
         {/* Horizontal scrollable pills */}
         <div
           ref={scrollRef}
-          className="flex gap-2 overflow-x-auto pb-4 scrollbar-hide -mx-4 px-4 sm:-mx-6 sm:px-6"
+          className="flex gap-3 overflow-x-auto pb-6 -mx-5 px-5"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {scamTypes.map((type) => (
             <button
               key={type.id}
               onClick={() => setSelected(type)}
-              className={`flex-shrink-0 px-3 py-2 text-xs sm:text-sm font-medium transition-all duration-200 rounded-full ${
+              className={`flex-shrink-0 px-5 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg ${
                 selected.id === type.id
-                  ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25"
-                  : "bg-secondary border border-border text-foreground hover:border-primary"
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-card border border-border text-foreground hover:border-primary"
               }`}
             >
               {type.name}
@@ -113,39 +113,30 @@ export function ScamTypeSelector() {
         </div>
 
         {/* Dynamic content */}
-        <div className="grid md:grid-cols-3 gap-4 md:gap-6 mt-6 md:mt-8">
-          <div className="p-4 sm:p-6 bg-card border border-border rounded-2xl">
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-1 h-4 bg-primary rounded-full" />
-              <h3 className="text-xs uppercase tracking-wider text-muted-foreground">
-                Description
-              </h3>
-            </div>
-            <p className="text-sm sm:text-base text-foreground leading-relaxed">
+        <div className="grid md:grid-cols-3 gap-5 mt-2">
+          <div className="p-6 bg-card border border-border rounded-xl">
+            <h3 className="text-sm font-medium text-muted-foreground mb-3">
+              Description
+            </h3>
+            <p className="text-foreground leading-relaxed">
               {selected.description}
             </p>
           </div>
-          <div className="p-4 sm:p-6 bg-card border border-border rounded-2xl">
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-1 h-4 bg-primary rounded-full" />
-              <h3 className="text-xs uppercase tracking-wider text-muted-foreground">
-                Recovery Method
-              </h3>
-            </div>
-            <p className="text-sm sm:text-base text-foreground leading-relaxed">{selected.method}</p>
+          <div className="p-6 bg-card border border-border rounded-xl">
+            <h3 className="text-sm font-medium text-muted-foreground mb-3">
+              Recovery Method
+            </h3>
+            <p className="text-foreground leading-relaxed">{selected.method}</p>
           </div>
-          <div className="p-4 sm:p-6 bg-card border border-border rounded-2xl">
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-1 h-4 bg-primary rounded-full" />
-              <h3 className="text-xs uppercase tracking-wider text-muted-foreground">
-                Recovery Rate
-              </h3>
-            </div>
-            <p className="text-3xl sm:text-4xl font-mono font-bold text-primary">
+          <div className="p-6 bg-card border border-border rounded-xl">
+            <h3 className="text-sm font-medium text-muted-foreground mb-3">
+              Recovery Rate
+            </h3>
+            <p className="text-4xl font-mono font-bold text-primary">
               {selected.recoveryRate}
             </p>
-            <p className="text-xs sm:text-sm text-muted-foreground mt-2">
-              Based on closed cases
+            <p className="text-sm text-muted-foreground mt-2">
+              Based on closed cases in this category
             </p>
           </div>
         </div>
