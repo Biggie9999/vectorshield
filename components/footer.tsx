@@ -43,10 +43,11 @@ export function Footer() {
             </p>
             <div className="flex flex-col gap-2.5">
               <a
-                href="mailto:cases@vectorshield.com"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                href="mailto:sarahleonard@vectorshielderecovery.com"
+                className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
               >
-                cases@vectorshield.com
+                <Mail className="w-5 h-5 flex-shrink-0" />
+                sarahleonard@vectorshielderecovery.com
               </a>
               <p className="text-sm text-muted-foreground">
                 London | Singapore | New York
