@@ -1,4 +1,4 @@
-import { Shield } from "lucide-react"
+import { Shield, Mail } from "lucide-react"
 
 export function Footer() {
   return (
