@@ -68,7 +68,7 @@ export function Footer() {
               &copy; {new Date().getFullYear()} VectorShield Recovery Ltd. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground">
-              Regulated by the Financial Conduct Authority (Placeholder)
+              Regulated by the Financial Conduct Authority
             </p>
           </div>
         </div>
