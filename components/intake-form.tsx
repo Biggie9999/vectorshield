@@ -31,7 +31,7 @@ export function IntakeForm() {
     setStatus("submitting")
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/Sarahleonard@vectorshieldrecovery.com", {
+      const response = await fetch("https://formsubmit.co/ajax/sarahleonard@vectorshielderecovery.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
