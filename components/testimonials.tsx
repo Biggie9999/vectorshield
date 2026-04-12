@@ -17,10 +17,10 @@ export function Testimonials() {
 
         <div className="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-xl border border-slate-200 dark:border-slate-700 max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row">
-            <div className="md:w-5/12 relative min-h-[300px] md:min-h-full overflow-hidden group">
+            <div className="md:w-5/12 relative min-h-[350px] overflow-hidden group">
               <Dialog>
                 <DialogTrigger asChild>
-                  <div role="button" tabIndex={0} className="w-full h-full relative cursor-pointer outline-none block">
+                  <div role="button" tabIndex={0} className="absolute inset-0 w-full h-full cursor-pointer outline-none block">
                     <Image
                       src="/images/testimonial-real-woman.jpg"
                       alt="Client expressing gratitude with a sign"
@@ -39,9 +39,11 @@ export function Testimonials() {
                   <div className="relative pt-[56.25%] w-full bg-black">
                     <video 
                       controls 
-                      autoPlay 
+                      playsInline
                       className="absolute inset-0 w-full h-full object-contain"
                       src="/videos/testimonial.mp4"
+                      poster="/images/testimonial-real-woman.jpg"
+                      preload="metadata"
                     >
                       Your browser does not support the video tag.
                     </video>
