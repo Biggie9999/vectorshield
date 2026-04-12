@@ -17,6 +17,35 @@ const spaceMono = Space_Mono({
   display: 'swap',
 });
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "VectorShield Recovery",
+  "image": "https://vectorshielderecovery.com/icon.svg",
+  "description": "Forensic-grade blockchain tracing and legal recovery for crypto fraud victims.",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "184"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Sarah M."
+      },
+      "datePublished": "2026-03-15",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Thank you Vector Shield Recovery Partners for restoring my smile. Successfully recovered lost retirement funds from a sophisticated investment scam."
+    }
+  ]
+};
+
 export const metadata: Metadata = {
   title: 'VectorShield Recovery | Crypto Fraud Recovery Specialists',
   description: 'Forensic-grade blockchain tracing and legal recovery for crypto fraud victims. $47M+ recovered across 800+ cases in 62 countries.',
@@ -52,6 +81,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${spaceMono.variable}`} suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="font-sans antialiased bg-background text-foreground">
         <ThemeProvider
           attribute="class"
