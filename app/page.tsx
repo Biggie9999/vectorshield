@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero"
 import { ScamTypeSelector } from "@/components/scam-type-selector"
 import { ProcessSteps } from "@/components/process-steps"
 import { RecoveredCases } from "@/components/recovered-cases"
+import { Testimonials } from "@/components/testimonials"
 import { TrustSignals } from "@/components/trust-signals"
 import { IntakeForm } from "@/components/intake-form"
 import { Footer } from "@/components/footer"
@@ -15,6 +16,7 @@ export default function Home() {
       <ScamTypeSelector />
       <ProcessSteps />
       <RecoveredCases />
+      <Testimonials />
       <TrustSignals />
       <IntakeForm />
       <Footer />
