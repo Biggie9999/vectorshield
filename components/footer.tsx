@@ -50,7 +50,7 @@ export function Footer() {
                 sarahleonard@vectorshielderecovery.com
               </a>
               <p className="text-sm text-muted-foreground">
-                London | Singapore | New York
+                New York | Los Angeles | Chicago
               </p>
             </div>
           </div>
@@ -69,7 +69,7 @@ export function Footer() {
               &copy; {new Date().getFullYear()} VectorShield Recovery Ltd. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground">
-              Regulated by the Financial Conduct Authority
+              Headquartered in the United States
             </p>
           </div>
         </div>
