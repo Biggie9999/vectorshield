@@ -43,11 +43,11 @@ export function Footer() {
             </p>
             <div className="flex flex-col gap-2.5">
               <a
-                href="mailto:sarahleonard@vectorshielderecovery.com"
+                href="mailto:vectorshielderecovery@gmail.com"
                 className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Mail className="w-5 h-5 flex-shrink-0" />
-                sarahleonard@vectorshielderecovery.com
+                vectorshielderecovery@gmail.com
               </a>
               <p className="text-sm text-muted-foreground">
                 New York | Los Angeles | Chicago
