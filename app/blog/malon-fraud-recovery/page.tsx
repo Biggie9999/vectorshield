@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowLeft, Shield, Search, Lock } from "lucide-react"
 
 export default function BlogPost() {
@@ -36,6 +37,16 @@ export default function BlogPost() {
             The Malon Fraud Syndicate thought they had executed the perfect crime. By routing funds through thousands of intermediary wallets and utilizing advanced tumbling services, they believed the $230 million was untraceable. They were wrong.
           </p>
         </header>
+
+        <div className="mb-12 relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden border border-border">
+          <Image 
+            src="/images/malon.jpg" 
+            alt="The Malon Fraud Syndicate - Investigation Target"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
 
         <div className="prose prose-invert prose-lg max-w-none">
           <h2 className="flex items-center gap-3 text-2xl font-bold mt-12 mb-6">
