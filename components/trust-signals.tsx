@@ -1,5 +1,4 @@
-import { Shield, Globe, BadgeCheck } from "lucide-react"
-
+import { Shield, Globe } from "lucide-react"
 const signals = [
   {
     icon: Shield,
@@ -12,12 +11,6 @@ const signals = [
     title: "NCA & Interpol Coordination",
     description:
       "Direct working relationships with the UK National Crime Agency, Interpol, and cybercrime units in 14 countries for cross-border case coordination.",
-  },
-  {
-    icon: BadgeCheck,
-    title: "No Recovery, No Fee",
-    description:
-      "We operate on contingency. If we don't recover your funds, you don't pay. Our success is directly aligned with yours.",
   },
 ]
 
@@ -40,7 +33,7 @@ export function TrustSignals() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5 mb-12">
+        <div className="grid md:grid-cols-2 gap-5 mb-12">
           {signals.map((signal) => (
             <div key={signal.title} className="p-6 bg-card border border-border rounded-xl">
               <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
