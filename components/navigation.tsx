@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Shield } from "lucide-react"
 import { ThemeToggle } from "./theme-toggle"
 import Image from "next/image"
+import Link from "next/link"
 
 const WHATSAPP_NUMBER = "14145511344"
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hi%2C%20I%20need%20help%20with%20crypto%20recovery.`
@@ -45,18 +46,21 @@ export function Navigation() {
 
           {/* Desktop Navigation Links */}
           <div className="hidden lg:flex items-center gap-10">
-            <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Services
             </a>
-            <a href="#process" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/#process" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Process
             </a>
-            <a href="#cases" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/#cases" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Cases
             </a>
-            <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Contact
             </a>
+            <Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Blog
+            </Link>
           </div>
 
           {/* Right side */}
